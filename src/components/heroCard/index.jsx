@@ -11,7 +11,7 @@ import {
  
 export default function SimpleCard() {
   return (
-    <Card className="mt-6 w-96">
+    <Card className="mt-6 w-full md:w-96 z-30">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2">
           UI/UX Review Check
