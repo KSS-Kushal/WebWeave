@@ -8,12 +8,12 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
- 
+
 export default function SimpleCard() {
   return (
-    <Card className="mt-6 w-full md:w-96 z-30">
+    <Card className="mt-6 w-full z-30">
       <CardBody>
-        <Typography variant="h5" color="blue-gray" className="mb-2">
+        <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
           UI/UX Review Check
         </Typography>
         <Typography>
@@ -22,15 +22,15 @@ export default function SimpleCard() {
           night life in Barcelona.
         </Typography>
       </CardBody>
-      <CardFooter className="pt-0 flex gap-2">
-        <div className="flex flex-col items-center gap-2">
-        <Button className="flex flex-col justify-center items-center gap-2 rounded-full" color="blue" variant="outlined" size="sm">
-          <FaArrowDown color="skyblue"/>
-          More Info</Button>
+      <CardFooter className="pt-0 flex gap-2 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 w-full">
+          <Button className="flex  justify-center items-center gap-2 rounded-full text-[#050C9C] border-[#050C9C]" color="blue" variant="outlined">
+            <FaArrowDown color="#050C9C" />
+            More Info</Button>
+          <Button className="rounded-full bg-[#050C9C]" color="blue">
+            Direct Contact Us
+          </Button >
         </div>
-        <Button className="rounded-full" color="blue">
-          Direct Contact Us
-        </Button >
       </CardFooter>
     </Card>
   );

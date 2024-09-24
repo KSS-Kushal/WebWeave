@@ -6,23 +6,21 @@ import HeroCard from "@/components/heroCard";
 import ImageTextBox from "@/components/imageTextBox";
 import ReviewCard from "@/components/reviewCard";
 import From from "@/components/from";
-import { Button } from "@material-tailwind/react";
 import { Fragment } from "react";
 
 export default function Home() {
   return (
     <Fragment>
       <Header />
-
       <div className="relative flex flex-col justify-center items-center  mb-24 w-full">
         <Carousel />
-        <div className="absolute -bottom-5 px-5">
+        <div className="absolute -bottom-72 md:-bottom-32 px-5 w-ful md:w-[50%]">
           <HeroCard />
         </div>
       </div>
-      <div className="flex  justify-between items-center  px-7 py-10 bg-gray-300 w-full flex-col md:flex-row gap-3">
+      <div className="flex  justify-between items-center  px-7 py-10 bg-gray-300 w-full flex-col md:flex-row gap-3 mt-80 md:mt-52">
         <div className="w-full md:w-1/2 flex justify-center items-center">
-        <p className=" text-xl font-bold text-gray-800">Our Mission"</p>
+          <p className=" text-xl font-bold text-gray-800">Our Mission"</p>
         </div>
         <div className="w-full md:w-1/2 flex justify-center items-center ">
           <p className="text-xl font-bold text-gray-800 text-center ">
@@ -53,36 +51,34 @@ export default function Home() {
         <p className="text-4xl font bold">web weave</p>
         <div className="flex justify-between items-center gap-5 flex-col md:flex-row">
           <div className="flex-1 rounded-xl">
-          <img
-            className="w-full rounded-xl "
-            src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
-          />
+            <img
+              className="w-full rounded-xl "
+              src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
+            />
           </div>
           <div className="flex-1 rounded-xl">
-          <img
-            className="w-full rounded-xl"
-            src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
-          />
+            <img
+              className="w-full rounded-xl"
+              src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
+            />
           </div>
           <div className="flex-1 rounded-xl">
-          <img
-            className="w-full rounded-xl"
-            src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
-          />
+            <img
+              className="w-full rounded-xl"
+              src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
+            />
           </div>
         </div>
       </div>
 
-  
-        <div className="flex flex-col justify-center items-center gap-5 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto my-20">
-          <p className="text-4xl font bold">Review</p>
-          <div className="flex  justify-center items-center gap-7 overflow-x-scroll w-full ">
+      <div className="flex flex-col justify-center items-center gap-5 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto my-20">
+        <p className="text-4xl font bold">Review</p>
+        <div className="flex  justify-center items-center gap-7 overflow-x-scroll w-full ">
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />
-          </div>
         </div>
-      
+      </div>
 
       <video className="w-full" source="" />
 
