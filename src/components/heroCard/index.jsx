@@ -24,11 +24,11 @@ export default function SimpleCard() {
       </CardBody>
       <CardFooter className="pt-0 flex gap-2">
         <div className="flex flex-col items-center gap-2">
-        <Button color="blue">
-          <FaArrowDown color="red"/>
+        <Button className="flex flex-col justify-center items-center gap-2 rounded-full" color="blue" variant="outlined" size="sm">
+          <FaArrowDown color="skyblue"/>
           More Info</Button>
         </div>
-        <Button color="blue">
+        <Button className="rounded-full" color="blue">
           Direct Contact Us
         </Button >
       </CardFooter>
