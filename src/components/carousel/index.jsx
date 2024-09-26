@@ -16,7 +16,12 @@ export default function CarouselDefault() {
         className="h-full w-full object-cover"
       />
       <img
-        src="/assets/heroBanner1.webp"
+        src="/assets/heroBanner3.webp"
+        alt="image 3"
+        className="h-full w-full object-cover"
+      />
+      <img
+        src="/assets/heroBanner4.webp"
         alt="image 3"
         className="h-full w-full object-cover"
       />
