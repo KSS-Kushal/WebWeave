@@ -20,17 +20,42 @@ export default function Home() {
       </div>
       <div className="flex  justify-between items-center  px-7 py-10 bg-gray-300 w-full flex-col md:flex-row gap-3 mt-80 md:mt-52">
         <div className="w-full md:w-1/2 flex justify-center items-center">
-          <p className=" text-xl font-bold text-gray-800">Our Mission"</p>
+          <p className=" text-xl font-bold text-gray-500">
+            Our Mission
+            </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center items-center ">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center ">
           <p className="text-xl font-bold text-gray-800 text-center ">
-            web analytics class of chemistry University of the world of warcraft
-            terms in the morning na pathia nije der me call kra tha first time
-            noi
+        At WebWeave Creations, our mission is to empower small businesses by providing innovative and affordable web solutions. We believe that every business deserves a strong online presence, and we are committed to delivering high-quality websites that are tailored to meet the unique needs of our clients.
           </p>
+          <p className="text-xl font-bold text-gray-800 text-center ">
+            Our goals include:
+          </p>
+          <ul className="list-disc list-inside text-gray-800 ">
+            <li>
+              <span className="font-semibold">
+                Empowerment:</span> 
+              Helping businesses thrive in the digital landscape through effective online strategies.
+            </li>
+            <li>
+              <span className="font-semibold">
+                Innovation:</span>
+              Utilizing the latest technologies and design trends to create visually appealing and functional websites.
+            </li>
+            <li>
+              <span className="font-semibold">
+                
+            Customer-Centric Approach: </span>
+              Prioritizing our clients’ needs and building long-lasting relationships based on trust and satisfaction.
+            </li>
+          </ul>
         </div>
       </div>
+      
       <div className="my-20 flex flex-col gap-10 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
+        <p className="text-2xl font-bold text-center text-gray-800">
+          Our Services
+        </p>
         <ImageTextBox
           image="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
           heading="web weave"
@@ -53,13 +78,13 @@ export default function Home() {
           <div className="flex-1 rounded-xl">
             <img
               className="w-full rounded-xl "
-              src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
+              src="panchali.png"
             />
           </div>
           <div className="flex-1 rounded-xl">
             <img
               className="w-full rounded-xl"
-              src="https://www.healthkart.com/connect/wp-content/uploads/2021/07/Header-10.jpg"
+              src="veda.png"
             />
           </div>
           <div className="flex-1 rounded-xl">
