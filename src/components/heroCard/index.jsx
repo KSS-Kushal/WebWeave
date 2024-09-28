@@ -14,12 +14,10 @@ export default function SimpleCard() {
     <Card className="mt-6 w-full z-30">
       <CardBody>
         <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
-          UI/UX Review Check
+        Crafting Digital Solutions for Small Businesses
         </Typography>
         <Typography>
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to &quot;Naviglio&quot; where you can enjoy the main
-          night life in Barcelona.
+          At WebWeave Creations, we specialize in building custom websites that bring your business vision to life. Whether it's a simple landing page or a fully functional e-commerce platform, our experienced team delivers tailored solutions that meet your unique needs.
         </Typography>
       </CardBody>
       <CardFooter className="pt-0 flex gap-2 w-full">
