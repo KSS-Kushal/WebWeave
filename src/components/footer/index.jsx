@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
- 
+
 const LINKS = [
   {
     title: "Product",
@@ -16,16 +16,16 @@ const LINKS = [
     items: ["Blog", "Newsletter", "Events", "Help center"],
   },
 ];
- 
+
 const currentYear = new Date().getFullYear();
- 
+
 export default function FooterWithSocialLinks() {
   return (
     <footer className="relative w-full">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6">
-            Material Tailwind
+            WebWeave
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
