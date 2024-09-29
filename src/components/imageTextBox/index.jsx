@@ -1,9 +1,9 @@
 "use client";
 import style from "./style.module.css";
 
-const ImageTextBox =({image,heading,text})=>{
+const ImageTextBox =({image,heading,text, revers})=>{
   return (
-    <div className="flex justify between items-center w-full flex-col md:flex-row gap-6">
+    <div className={`flex justify between items-center w-full flex-col ${revers?"md:flex-row-reverse":"md:flex-row"} gap-6`}>
       <div className="w-full md:w-1/2 ">
       <img  className="w-full rounded-xl" src={image}/>
       </div>
