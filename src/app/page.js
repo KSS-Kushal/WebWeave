@@ -15,12 +15,12 @@ export default function Home() {
       <Header />
       <div className="relative flex flex-col justify-center items-center  mb-24 w-full">
         <Carousel />
-        <div className="absolute -bottom-72 md:-bottom-32 px-5 w-ful md:w-[50%]">
+        <div className="absolute -bottom-96 md:-bottom-32 px-5 w-ful md:w-[50%]">
           <HeroCard />
         </div>
       </div>
       <div className="bg-gray-300 w-full">
-        <div className="flex  justify-between items-center py-10  flex-col md:flex-row gap-3 mt-80 md:mt-52 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
+        <div className="flex  justify-between items-center py-10  flex-col md:flex-row gap-3 mt-[27rem] md:mt-52 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <p className="text-4xl font-bold text-[#050C9C]">Our Mission</p>
           </div>
@@ -94,7 +94,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center items-center gap-5 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto my-20">
         <p className="text-4xl font bold">Review</p>
-        <div className="flex items-center gap-7 overflow-x-auto w-full snap-x snap-mandatory scroll">
+        <div className="flex items-center gap-7 overflow-x-auto w-full snap-x snap-mandatory scroll-mt-2 p-3">
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />
