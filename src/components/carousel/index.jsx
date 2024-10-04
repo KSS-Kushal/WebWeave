@@ -4,7 +4,7 @@ import { Carousel } from "@material-tailwind/react";
  
 export default function CarouselDefault() {
   return (
-    <Carousel className="rounded-xl w-full" autoplay draggable loop navigation={()=><div></div>}>
+    <Carousel className="rounded-xl w-full h-[50vh] md:h-screen" autoplay draggable loop navigation={()=><div></div>}>
       <img
         src="/assets/heroBanner1.webp"
         alt="image 1"
