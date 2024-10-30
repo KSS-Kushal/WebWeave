@@ -25,3 +25,24 @@ export const ourServices = [
         image:"/assets/seo.avif",
     },
 ]
+
+export const ourReviews = [
+    {
+        name: "Sarah J.",
+        profile: "Boutique Owner",
+        star: 5,
+        review: "Working with WebWeave Creations was a game-changer for my boutique. They created a beautiful, functional website that showcases my products perfectly. Their team was responsive and guided me every step of the way. My customers love the new site, and so do I!"
+    },
+    {
+        name: "Mark D.",
+        profile: "Fitness Trainer",
+        star: 5,
+        review: "I needed a simple, professional website to attract more clients, and WebWeave Creations delivered beyond my expectations. The landing page they designed is visually engaging and has really helped grow my business. Highly recommended for anyone looking to go digital!"
+    },
+    {
+        name: "Priya R.",
+        profile: "Small Business Owner",
+        star: 5,
+        review: "The team at WebWeave Creations built an online store for my business, and I couldn't be happier. They made everything so easy, from setting up the site to explaining how to manage orders. Their e-commerce solutions have transformed how I do business!"
+    },
+]

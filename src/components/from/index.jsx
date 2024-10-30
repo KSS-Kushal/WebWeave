@@ -5,6 +5,7 @@ import {
   Checkbox,
   Button,
   Typography,
+  Textarea,
 } from "@material-tailwind/react";
  
 export default function SimpleRegistrationForm() {
@@ -20,7 +21,7 @@ export default function SimpleRegistrationForm() {
           </Typography>
           <Input
             size="lg"
-            placeholder="name@mail.com"
+            placeholder="Full Name"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
@@ -40,10 +41,9 @@ export default function SimpleRegistrationForm() {
           <Typography variant="h6" color="blue-gray" className="-mb-3">
             Query
           </Typography>
-          <Input
-            type="password"
+          <Textarea
             size="lg"
-            placeholder="********"
+            placeholder="Describe Your Ideas!"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
