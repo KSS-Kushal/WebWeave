@@ -5,17 +5,15 @@ import {
   Checkbox,
   Button,
   Typography,
+  Textarea,
 } from "@material-tailwind/react";
  
 export default function SimpleRegistrationForm() {
   return (
      <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="blue-gray">
+      <p className="text-4xl font-bold text-[#050C9C]">
         Contact Us
-      </Typography>
-      <Typography color="gray" className="mt-1 font-normal">
-        Nice to meet you! Enter your details to register.
-      </Typography>
+      </p>
       <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-6">
           <Typography variant="h6" color="blue-gray" className="-mb-3">
@@ -23,7 +21,7 @@ export default function SimpleRegistrationForm() {
           </Typography>
           <Input
             size="lg"
-            placeholder="name@mail.com"
+            placeholder="Full Name"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
@@ -43,10 +41,9 @@ export default function SimpleRegistrationForm() {
           <Typography variant="h6" color="blue-gray" className="-mb-3">
             Query
           </Typography>
-          <Input
-            type="password"
+          <Textarea
             size="lg"
-            placeholder="********"
+            placeholder="Describe Your Ideas!"
             className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
@@ -54,7 +51,7 @@ export default function SimpleRegistrationForm() {
           />
         </div>
         
-        <Button className="mt-6" fullWidth>
+        <Button className="bg-[#050C9C] mt-6" color="blue" fullWidth>
           Contact Us
         </Button>
         
