@@ -8,8 +8,11 @@ import {
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
  
 export default function StickyNavbar() {
+  const router = useRouter();
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -26,43 +29,43 @@ export default function StickyNavbar() {
         variant="small"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
-        </a>
+        <Link href="/" className="flex items-center">
+          Home
+        </Link>
       </Typography>
       <Typography
         as="li"
         variant="small"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
+        <Link href="#about" className="flex items-center">
+          About
+        </Link>
       </Typography>
       <Typography
         as="li"
         variant="small"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Blocks
-        </a>
+        <Link href="#services" className="flex items-center">
+          Services
+        </Link>
       </Typography>
       <Typography
         as="li"
         variant="small"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
+        <Link href="#projects" className="flex items-center">
+          Projects
+        </Link>
       </Typography>
     </ul>
   );
  
   return (
-    <div className="max-h-[768px] w-full mx:auto">
-      <Navbar className="fixed top-0 z-50 h-max max-w-full bg-[#050C9C] rounded-none px-4 py-2 lg:px-8 lg:py-4 border-none">
+    <div className="sticky top-0 left-0 z-50 max-h-[768px] w-full mx:auto">
+      <Navbar className="  h-max max-w-full bg-[#050C9C] rounded-none px-4 py-2 lg:px-8 lg:py-4 border-none">
         <div className="flex items-center justify-between text-white">
           <Typography
             as="a"
@@ -79,6 +82,7 @@ export default function StickyNavbar() {
                 size="sm"
                 className="hidden text-[#050C9C] lg:inline-block"
                 color="white"
+                onClick={() => router.push('#contact')}
               >
                 <span>Contact</span>
               </Button>

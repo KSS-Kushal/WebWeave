@@ -7,7 +7,7 @@ import ImageTextBox from "@/components/imageTextBox";
 import ReviewCard from "@/components/reviewCard";
 import From from "@/components/from";
 import { Fragment } from "react";
-import { ourServices } from "./data";
+import { ourReviews, ourServices } from "./data";
 
 export default function Home() {
   return (
@@ -15,12 +15,12 @@ export default function Home() {
       <Header />
       <div className="relative flex flex-col justify-center items-center  mb-24 w-full">
         <Carousel />
-        <div className="absolute -bottom-72 md:-bottom-32 px-5 w-ful md:w-[50%]">
+        <div className="absolute -bottom-96 md:-bottom-32 px-5 w-ful md:w-[50%]">
           <HeroCard />
         </div>
       </div>
-      <div className="bg-gray-300 w-full">
-        <div className="flex  justify-between items-center py-10  flex-col md:flex-row gap-3 mt-80 md:mt-52 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
+      <div id="about" className="bg-gray-300 w-full">
+        <div className="flex  justify-between items-center py-10  flex-col md:flex-row gap-3 mt-[27rem] md:mt-52 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <p className="text-4xl font-bold text-[#050C9C]">Our Mission</p>
           </div>
@@ -63,15 +63,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="my-20 flex flex-col gap-10 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
+      <div id="services" className="my-20 flex flex-col gap-10 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
         <p className="text-4xl font-bold text-center text-[#050C9C]">
           Our Services
         </p>
         {ourServices.map((v, i)=>(
-          <ImageTextBox {...v} revers={i%2===1} />
+          <ImageTextBox key={i} {...v} revers={i%2===1} />
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center pb-7 gap-3 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
+      <div id="projects" className="flex flex-col justify-center items-center pb-7 gap-3 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto">
         <p className="text-4xl font-bold text-[#050C9C] mb-10">Recent Projects</p>
         <div className="flex justify-between items-center gap-5 flex-col md:flex-row">
           <div className="flex-1 rounded-xl shadow-xl">
@@ -93,17 +93,17 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-center items-center gap-5 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto my-20">
-        <p className="text-4xl font bold">Review</p>
-        <div className="flex items-center gap-7 overflow-x-auto w-full snap-x snap-mandatory scroll">
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+        <p className="text-4xl font-bold text-[#050C9C] mb-10">Testimonials</p>
+        <div className="flex items-center gap-7 overflow-x-auto w-full snap-x snap-mandatory scroll-mt-2 p-3">
+          {ourReviews.map((v, i)=>(
+            <ReviewCard key={i} {...v} />
+          ))}
         </div>
       </div>
 
       {/* <video className="w-full" source="" /> */}
 
-      <div className="flex justify-center items-center p-3 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto mb-20">
+      <div id="contact" className="flex justify-center items-center p-3 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto mb-20">
         <From />
       </div>
       <Footer />
