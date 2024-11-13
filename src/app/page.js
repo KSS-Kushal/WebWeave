@@ -8,8 +8,10 @@ import ReviewCard from "@/components/reviewCard";
 import From from "@/components/from";
 import { Fragment } from "react";
 import { ourReviews, ourServices } from "./data";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <Fragment>
       <Header />
@@ -107,6 +109,9 @@ export default function Home() {
         <From />
       </div>
       <Footer />
+      <div className="fixed bottom-12 md:bottom-20 right-7 w-14 h-14 shadow-2xl border border-white bg-white rounded-full cursor-pointer" onClick={() => router.push('https://wa.me/918145248275')}>
+        <img src="/assets/whatsapp.png" alt="WhatsApp" title="Contact Us" srcset="" className="rounded-full" />
+      </div>
     </Fragment>
   );
 }

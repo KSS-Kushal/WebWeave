@@ -21,12 +21,13 @@ const currentYear = new Date().getFullYear();
 
 export default function FooterWithSocialLinks() {
   return (
-    <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6">
+    <footer className="relative w-full bg-[#050C9C]">
+      <div className="mx-auto w-full max-w-7xl py-10 px-8">
+        <div className="grid grid-cols-1 justify-between items-center gap-4 md:grid-cols-2">
+          {/* <Typography variant="h5" className="mb-6">
             WebWeave
-          </Typography>
+          </Typography> */}
+          <img src="/assets/logo.jpg" alt="WebWeave" srcset="" className="w-28 h-28 rounded-full" />
           <div className="grid grid-cols-4 justify-between gap-4">
             {/* {LINKS.map(({ title, items }) => (
               <ul key={title}>
@@ -54,7 +55,7 @@ export default function FooterWithSocialLinks() {
             <Typography
               as="a"
               href="/"
-              color="gray"
+              color="white"
               className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
             >
               Home
@@ -62,7 +63,7 @@ export default function FooterWithSocialLinks() {
             <Typography
               as="a"
               href="#about"
-              color="gray"
+              color="white"
               className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
             >
               About
@@ -70,7 +71,7 @@ export default function FooterWithSocialLinks() {
             <Typography
               as="a"
               href="#services"
-              color="gray"
+              color="white"
               className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
             >
               Services
@@ -78,7 +79,7 @@ export default function FooterWithSocialLinks() {
             <Typography
               as="a"
               href="#projects"
-              color="gray"
+              color="white"
               className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
             >
               Projects
@@ -88,19 +89,19 @@ export default function FooterWithSocialLinks() {
         <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 text-center font-normal text-white md:mb-0"
           >
             &copy; {currentYear} WebWeave. All
             Rights Reserved.
           </Typography>
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 text-center font-normal text-white md:mb-0"
           >
             Designed and Developed by @KSS
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
-            <Typography as="a" href="https://www.facebook.com/webweavecreations" target="_blank" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://www.facebook.com/webweavecreations" target="_blank" className="opacity-80 transition-opacity hover:opacity-100 text-white">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" ariaHidden="true">
                 <path
                   fillRule="evenodd"
@@ -109,7 +110,7 @@ export default function FooterWithSocialLinks() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="https://www.instagram.com/creationswebweave/ " target="_blank" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://www.instagram.com/creationswebweave/ " target="_blank" className="opacity-80 transition-opacity hover:opacity-100 text-white">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" ariaHidden="true">
                 <path
                   fillRule="evenodd"
