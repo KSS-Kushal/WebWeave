@@ -67,13 +67,14 @@ export default function StickyNavbar() {
     <div className="sticky top-0 left-0 z-50 max-h-[768px] w-full mx:auto">
       <Navbar className="  h-max max-w-full bg-[#050C9C] rounded-none px-4 py-2 lg:px-8 lg:py-4 border-none">
         <div className="flex items-center justify-between text-white">
-          <Typography
+          {/* <Typography
             as="a"
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
             WebWeave
-          </Typography>
+          </Typography> */}
+          <img src="/assets/webweaveLogo.png" alt="" srcset="" className="w-40 h-12" />
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
@@ -129,8 +130,8 @@ export default function StickyNavbar() {
         <Collapse open={openNav}>
           {navList}
           <div className="flex items-center gap-x-1">
-            <Button fullWidth size="sm" color="white" className="text-[#050C9C]">
-              <span>Contact</span>
+            <Button fullWidth size="sm" color="white" className="text-[#050C9C]" onClick={() => router.push('#contact')}>
+              Contact
             </Button>
           </div>
         </Collapse>
