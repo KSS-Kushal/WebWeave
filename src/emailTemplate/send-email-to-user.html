@@ -57,6 +57,17 @@
       font-size: 14px;
       color: #777777;
     }
+
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -74,11 +85,14 @@
       <ul>
         <li><strong>Name:</strong> {{name}}</li>
         <li><strong>Email:</strong> {{email}}</li>
-        <li><strong>Phone:</strong> {{phone}}</li>
         <li><strong>Query:</strong> {{query}}</li>
       </ul>
 
-      <p>If you have any additional questions, feel free to reply to this email or visit our website.</p>
+      <p>If you have any additional questions, feel free to reply to this email, visit our website, or message us directly on WhatsApp:</p>
+
+      <p>
+        <a href="https://wa.me/918145248275" class="whatsapp-link" target="_blank">Message us on WhatsApp</a>
+      </p>
 
       <p>Best Regards,<br>WebWeave Creations Team</p>
 
@@ -87,7 +101,7 @@
       </p>
     </div>
     <div class="email-footer">
-      <p>&copy; {{year}} WebWeave Creations. All rights reserved.</p>
+      <p>&copy; {{Year}} WebWeave Creations. All rights reserved.</p>
     </div>
   </div>
 </body>

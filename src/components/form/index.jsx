@@ -20,6 +20,8 @@ export default function SimpleRegistrationForm() {
   const [emailError, setEmailError] = useState(false);
   const [queryError, setQueryError] = useState(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const onChange = (e, type) => {
     if (type === "name") {
@@ -53,8 +55,18 @@ export default function SimpleRegistrationForm() {
       alert("Please fill the form correctly");
       return;
     }
-    await sendEmailToOwner({name, email, query});
-    await sendEmailToUser({name, email, query});
+    setIsLoading(true);
+    const res = await sendEmailToOwner({name, email, query});
+    if(res) {
+      await sendEmailToUser({name, email, query});
+      alert("Thank you for contacting us. We will get back to you soon.");
+      setName("");
+      setEmail("");
+      setQuery("");
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
+    setIsLoading(false);
   }
   return (
      <Card color="transparent" shadow={false}>
@@ -112,7 +124,7 @@ export default function SimpleRegistrationForm() {
           />
         </div>
         
-        <Button className="bg-[#050C9C] mt-6" color="blue" fullWidth onClick={submitForm}>
+        <Button className="bg-[#050C9C] mt-6" color="blue" fullWidth onClick={submitForm} loading={isLoading}>
           Contact Us
         </Button>
         

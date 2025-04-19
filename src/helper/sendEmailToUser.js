@@ -18,23 +18,25 @@ export const sendEmailToUser = async (data) => {
         });
 
         // Read the email template
-        const templatePath = path.join(process.cwd(), 'emailTemplate/send-email-to-user.html');
+        const templatePath = path.join(process.cwd(), 'src/emailTemplate/send-email-to-user.html');
         const template = fs.readFileSync(templatePath, 'utf-8');
 
         // Replace placeholders with actual subscriber details
         const emailContent = template
             .replaceAll('{{name}}', data.name)
             .replace('{{email}}', data.email)
-            .replace('{{phone}}', data.phone)
             .replace('{{query}}', data.query)
             .replace('{{Year}}', new Date().getFullYear().toString())
 
         // Define email options
         const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: email,
+            from: `WebWeave Creations ${process.env.EMAIL_USER}`,
+            to: data.email,
             subject: 'Thank You for Contacting WebWeave Creations!',
             html: emailContent,
+            headers: {
+                'List-Unsubscribe': '<mailto:contact.webweavecreations@gmail.com>, <https://webweavecreations.in>'
+            }   
         };
 
         // Send the email
