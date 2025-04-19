@@ -5,7 +5,7 @@ import Carousel from "@/components/carousel";
 import HeroCard from "@/components/heroCard";
 import ImageTextBox from "@/components/imageTextBox";
 import ReviewCard from "@/components/reviewCard";
-import From from "@/components/from";
+import Form from "@/components/form";
 import { Fragment } from "react";
 import { ourReviews, ourServices } from "./data";
 import { useRouter } from "next/navigation";
@@ -106,11 +106,13 @@ export default function Home() {
       {/* <video className="w-full" source="" /> */}
 
       <div id="contact" className="flex justify-center items-center p-3 w-[90%] md:w-4/5 2xl:w-3/4 mx-auto mb-20">
-        <From />
+        <Form />
       </div>
       <Footer />
-      <div className="fixed bottom-12 md:bottom-20 right-7 w-14 h-14 shadow-2xl border border-white bg-white rounded-full cursor-pointer" onClick={() => router.push('https://wa.me/918145248275')}>
+      <div className="fixed bottom-12 md:bottom-20 right-7 z-[100] drop-shadow-2xl cursor-pointer" onClick={() => router.push('https://wa.me/918145248275')}>
+        <div className="w-14 h-14 border border-white bg-white rounded-full">
         <img src="/assets/whatsapp.png" alt="WhatsApp" title="Contact Us" srcset="" className="rounded-full" />
+        </div>
       </div>
     </Fragment>
   );
