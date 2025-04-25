@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+export const ownerTemplate = () => `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -87,3 +87,4 @@
 </body>
 
 </html>
+`;
