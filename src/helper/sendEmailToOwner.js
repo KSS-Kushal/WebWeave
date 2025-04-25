@@ -1,7 +1,8 @@
 "use server";
+import { ownerTemplate } from '@/emailTemplate/send-email-to-owner';
 import nodemailer from 'nodemailer';
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
 
 // Function to send a welcome email
 export const sendEmailToOwner = async (data) => {
@@ -18,8 +19,9 @@ export const sendEmailToOwner = async (data) => {
         });
 
         // Read the email template
-        const templatePath = path.join(process.cwd(), 'src/emailTemplate/send-email-to-owner.html');
-        const template = fs.readFileSync(templatePath, 'utf-8');
+        // const templatePath = path.join(process.cwd(), 'src/emailTemplate/send-email-to-owner.html');
+        // const template = fs.readFileSync("../emailTemplate/send-email-to-owner.html", 'utf-8');
+        const template = ownerTemplate();
 
         // Replace placeholders with actual subscriber details
         const emailContent = template

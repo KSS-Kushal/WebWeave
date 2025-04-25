@@ -1,7 +1,8 @@
 "use server";
 import nodemailer from 'nodemailer';
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
+import { userTemplate } from '@/emailTemplate/send-email-to-user';
 
 // Function to send a welcome email
 export const sendEmailToUser = async (data) => {
@@ -18,8 +19,9 @@ export const sendEmailToUser = async (data) => {
         });
 
         // Read the email template
-        const templatePath = path.join(process.cwd(), 'src/emailTemplate/send-email-to-user.html');
-        const template = fs.readFileSync(templatePath, 'utf-8');
+        // const templatePath = path.join(process.cwd(), 'src/emailTemplate/send-email-to-user.html');
+        // const template = fs.readFileSync(templatePath, 'utf-8');
+        const template = userTemplate();
 
         // Replace placeholders with actual subscriber details
         const emailContent = template
