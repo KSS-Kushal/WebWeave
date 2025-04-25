@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+export const userTemplate = () => `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -107,3 +107,4 @@
 </body>
 
 </html>
+`;
